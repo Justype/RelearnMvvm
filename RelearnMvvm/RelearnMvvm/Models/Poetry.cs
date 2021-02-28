@@ -65,9 +65,6 @@ namespace RelearnMvvm.Models
         #endregion
 
         #region SQLite Ignore
-
-        private string _snippet;
-
         /// <summary>
         /// 预览
         /// </summary>
@@ -75,6 +72,7 @@ namespace RelearnMvvm.Models
         public string Snippet =>
             _snippet ?? (_snippet = Content.Split('。')[0].Replace("\r\n", " "));
         // 以 。 进行切分，选择第一项。   可能有换行，所以替换
+        private string _snippet;
         #endregion
     }
 }

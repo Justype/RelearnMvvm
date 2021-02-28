@@ -79,6 +79,10 @@ namespace RelearnMvvm.UnitTest.Services
             Assert.IsFalse(poetryStorage.IsInitialized());
         }
 
+        /// <summary>
+        /// 测试获取诗词
+        /// </summary>
+        /// <returns></returns>
         [Test]
         public async Task TestGetPoetryAsync()
         {
@@ -91,6 +95,10 @@ namespace RelearnMvvm.UnitTest.Services
             await poetryStorage.CloseAsync(); // 关闭连接，使其能被删除。
         }
 
+        /// <summary>
+        /// 测试获取更多 诗词
+        /// </summary>
+        /// <returns></returns>
         [Test]
         public async Task TestGetPoetriesAsync()
         {
